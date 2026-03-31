@@ -6,7 +6,13 @@
 //
 
 #import "ShareMenuManager.h"
+#if __has_include(<RNShareMenu/RNShareMenu-Swift.h>)
 #import <RNShareMenu/RNShareMenu-Swift.h>
+#elif __has_include("RNShareMenu-Swift.h")
+#import "RNShareMenu-Swift.h"
+#else
+#import <RNShareMenu-Swift.h>
+#endif
 
 #import <React/RCTLinkingManager.h>
 
